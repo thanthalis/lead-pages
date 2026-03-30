@@ -41,7 +41,7 @@ export const POST: APIRoute = async ({ request }) => {
       properties: {
         Name: { title: [{ text: { content: name } }] },
         Email: { email: email },
-        Resource: { select: { name: resource } },
+        Resource: { rich_text: [{ text: { content: resource } }] },
       },
     });
 
